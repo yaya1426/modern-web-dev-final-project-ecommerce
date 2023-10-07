@@ -7,7 +7,7 @@ const userSchema = new Schema<User>(
     email: { type: String, required: true, unique: true },
     addresses: { type: [{}], required: true },
     phoneNumber: { type: String, required: true },
-    userId: { type: String, required: true, unique: true },
+    userId: { type: String, required: true, unique: true },//Clerk UserID
   },
   { versionKey: false, timestamps: true }
 );
