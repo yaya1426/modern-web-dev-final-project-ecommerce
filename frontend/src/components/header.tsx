@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 import styled from "styled-components";
+import { UserButton } from "@clerk/nextjs";
 
 const Navbar = styled.nav`
   display: flex;
@@ -13,11 +14,11 @@ const SiteLogo = styled.div`
   color: #ffffff;
 `;
 
-const Header: FC<PropsWithChildren> = ({ children }) => {
+const Header: FC = () => {
   return (
     <Navbar>
       <SiteLogo>Meem</SiteLogo>
-      {children}
+      <UserButton afterSignOutUrl="/" />
     </Navbar>
   );
 };
