@@ -3,6 +3,6 @@ import CartStatus from "./cart-status";
 interface Cart {
   status: CartStatus;
   cartItems: [];
-  user: any;
+  userId: string;
 }
 export default Cart;

@@ -4,9 +4,10 @@ import Product from "../types/product";
 const productSchema = new Schema<Product>(
   {
     title: { type: String, required: true },
+    slug: { type: String, required: true },
     description: { type: String, required: false },
     price: { type: Number, required: true },
-    quantity: { type: Number, required: true, default: 0 },
+    stock: { type: Number, required: true, default: 0 },
     image: { type: String, required: true },
     gallery: { type: [] },
     category: {
@@ -15,7 +16,7 @@ const productSchema = new Schema<Product>(
       required: true,
     },
   },
-  { versionKey: false }
+  { versionKey: false, timestamps: true }
 );
 const ProductModel = model("Product", productSchema);
 

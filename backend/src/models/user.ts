@@ -5,11 +5,11 @@ const userSchema = new Schema<User>(
   {
     fullName: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
     addresses: { type: [{}], required: true },
     phoneNumber: { type: String, required: true },
+    userId: { type: String, required: true, unique: true },
   },
-  { versionKey: false }
+  { versionKey: false, timestamps: true }
 );
 const UserModel = model("User", userSchema);
 

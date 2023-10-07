@@ -1,8 +1,7 @@
 import Product from "./product";
 
-interface OrderItem {
-    total: number;
-    quantity: number;
-    product:Product;
-  }
-  export default OrderItem;
+interface OrderItem extends Product {
+  total: number;
+  quantity: number;
+}
+export default OrderItem;

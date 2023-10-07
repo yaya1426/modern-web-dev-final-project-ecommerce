@@ -10,7 +10,7 @@ const cartItemSchema = new Schema<CartItem>(
       required: true,
     },
   },
-  { versionKey: false }
+  { versionKey: false, timestamps: true }
 );
 const CartItemModel = model("CartItem", cartItemSchema);
 
