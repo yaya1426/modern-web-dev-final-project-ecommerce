@@ -16,6 +16,7 @@ export const createCategory = async (data: Category) => {
 };
 
 export const updateCategory = async (id: string, data: Category) => {
+  data.
   const result = await CategoryModel.findByIdAndUpdate(id, data, {
     new: true,
   });

@@ -4,7 +4,7 @@ import Product from "../types/product";
 const productSchema = new Schema<Product>(
   {
     title: { type: String, required: true },
-    slug: { type: String, required: true },
+    slug: { type: String, required: true, unique: true },
     description: { type: String, required: false },
     price: { type: Number, required: true },
     stock: { type: Number, required: true, default: 0 },
