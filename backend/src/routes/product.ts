@@ -3,10 +3,21 @@ import {
   createProduct,
   deleteProduct,
   fetchProducts,
+  fetchProductById,
   updateProduct,
 } from "../services/product";
 
 const router = Router();
+
+router.get("/:id", async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    const data = await fetchProductById(id);
+    res.status(200).json(data);
+  } catch (err: any) {
+    res.status(500).json({ error: err?.message });
+  }
+});
 
 router.get("/category/:id", async (req: Request, res: Response) => {
   try {

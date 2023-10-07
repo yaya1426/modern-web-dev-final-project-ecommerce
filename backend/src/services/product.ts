@@ -7,10 +7,11 @@ export const fetchProducts = async (categoryId: string) => {
 };
 
 export const fetchProductById = async (id: string) => {
-  return await ProductModel.findById(id);
+  return await ProductModel.findById(id).populate("category");
 };
 
 export const createProduct = async (data: Product) => {
+  // TO DO: Create slug from title before saving it
   const result = new ProductModel(data);
   await result.save();
   return result;

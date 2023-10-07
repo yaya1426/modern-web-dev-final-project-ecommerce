@@ -14,7 +14,7 @@ router.get("/profile", async (req: Request, res: Response) => {
 
 router.post("/create", async (req: Request, res: Response) => {
   try {
-    // TO DO: Implement CLERK user creation
+    // TO DO: Implement CLERK user creation after successful signup
     res.status(200).send("Success!");
   } catch (err: any) {
     res.status(500).send({ error: err.message });

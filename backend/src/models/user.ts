@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
 import User from "../types/user";
+import UserRole from "../types/user-role";
 
 const userSchema = new Schema<User>(
   {
@@ -7,7 +8,8 @@ const userSchema = new Schema<User>(
     email: { type: String, required: true, unique: true },
     addresses: { type: [{}], required: true },
     phoneNumber: { type: String, required: true },
-    userId: { type: String, required: true, unique: true },//Clerk UserID
+    role: { type: String, required: true, default: UserRole.CUSTOMER },
+    userId: { type: String, required: true, unique: true }, // Clerk UserID
   },
   { versionKey: false, timestamps: true }
 );

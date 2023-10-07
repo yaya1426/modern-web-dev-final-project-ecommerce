@@ -6,3 +6,4 @@ This project is a full stack e-commerce website built using the following techno
 - Clerk (Authentication Service)
 - Paypal (Payment Gateway)
 - OpenAI (ChatBot AI using GPT)
+

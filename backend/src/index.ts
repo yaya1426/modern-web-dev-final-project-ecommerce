@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json()); // Add this line to enable JSON parsing in the request body
 app.use(cors({ origin: process.env.FRONTEND_URL }));
 
-// DB Connection
+// DB Connection (database name: meem_db)
 mongoose
   .connect(process.env.DATABASE_URL || "")
   .then(() => console.log("Connected to DB!"))
@@ -25,8 +25,8 @@ mongoose
 app.use("/category", categoryRoutes);
 app.use("/product", productRoutes);
 app.use("/user", userRoutes);
-app.use("/cart",cartRoutes);
-app.use("/order",orderRoutes);
+app.use("/cart", cartRoutes);
+app.use("/order", orderRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
