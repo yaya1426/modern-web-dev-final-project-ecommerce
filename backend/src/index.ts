@@ -5,6 +5,8 @@ import "dotenv/config";
 import categoryRoutes from "./routes/category";
 import productRoutes from "./routes/product";
 import userRoutes from "./routes/user";
+import cartRoutes from "./routes/cart";
+import orderRoutes from "./routes/order";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -22,7 +24,9 @@ mongoose
 // Routers
 app.use("/category", categoryRoutes);
 app.use("/product", productRoutes);
-app.use("/users", userRoutes);
+app.use("/user", userRoutes);
+app.use("/cart",cartRoutes);
+app.use("/order",orderRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

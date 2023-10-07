@@ -9,7 +9,7 @@ const orderSchema = new Schema<Order>(
     items: { type: [OrderItemModel] },
     status: { type: String, required: true, default: OrderStatus.PENDING },
     total: { type: Number, required: true },
-    cart: { type: Schema.Types.ObjectId, ref: "Cart", required: true },
+    cart: { type: String, ref: "Cart", required: true },
     userId: { type: String, required: true },
   },
   { versionKey: false, timestamps: true }

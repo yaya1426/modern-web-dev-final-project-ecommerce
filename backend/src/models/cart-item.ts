@@ -5,7 +5,7 @@ const cartItemSchema = new Schema<CartItem>(
   {
     quantity: { type: Number, required: true, default: 0 },
     product: {
-      type: Schema.Types.ObjectId,
+      type: String,
       ref: "Product",
       required: true,
     },

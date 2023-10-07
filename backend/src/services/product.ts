@@ -1,8 +1,9 @@
+import CategoryModel from "../models/category";
 import ProductModel from "../models/product";
 import Product from "../types/product";
 
-export const fetchProducts = async () => {
-  return await ProductModel.find().populate("category");
+export const fetchProducts = async (categoryId: string) => {
+  return await ProductModel.find({ category: categoryId }).populate("category");
 };
 
 export const fetchProductById = async (id: string) => {

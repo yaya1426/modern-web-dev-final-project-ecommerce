@@ -8,9 +8,10 @@ import {
 
 const router = Router();
 
-router.get("/", async (req: Request, res: Response) => {
+router.get("/category/:id", async (req: Request, res: Response) => {
   try {
-    const data = await fetchProducts();
+    const { id } = req.params;
+    const data = await fetchProducts(id);
     res.status(200).json(data);
   } catch (err: any) {
     res.status(500).json({ error: err?.message });
