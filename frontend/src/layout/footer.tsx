@@ -1,4 +1,5 @@
-import { FC, PropsWithChildren } from "react";
+import { spacing } from "@/theme/spacing";
+import { FC } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.nav`
@@ -6,15 +7,14 @@ const Wrapper = styled.nav`
   justify-content: space-around;
   background-color: #000000;
   color: #ffffff;
-  width: 100%;
-  padding: 25px 15px;
+  padding: 0px ${spacing.huge}px;
+
 `;
 
-const Footer: FC<PropsWithChildren> = ({ children }) => {
+const Footer: FC = () => {
   return (
     <Wrapper>
       All Rights Reserved
-      {children}
     </Wrapper>
   );
 };

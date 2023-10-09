@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/registery";
-import BodyContainer from "@/components/body-wrapper";
+import BodyContainer from "@/layout/body-wrapper";
 import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
