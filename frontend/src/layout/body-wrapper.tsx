@@ -17,7 +17,7 @@ const Container = styled.body`
 `;
 
 const Content = styled.div`
-  min-height: 85vh;
+  min-height:calc(100vh - 177px);
 `;
 
 const BodyContainer: FC<PropsWithChildren> = ({ children }) => {
