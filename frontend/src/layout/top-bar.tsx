@@ -1,6 +1,8 @@
 import { colors } from "@/theme/colors";
 import { spacing } from "@/theme/spacing";
 import styled from "styled-components";
+import { useLocale } from "next-intl";
+import LanguageSwitcher from "./language-switcher";
 
 export const Wrapper = styled.header`
   position: static;
@@ -17,6 +19,10 @@ export const Wrapper = styled.header`
 `;
 
 const TopBar = () => {
-  return <Wrapper></Wrapper>;
+  return (
+    <Wrapper>
+      <LanguageSwitcher />
+    </Wrapper>
+  );
 };
 export default TopBar;

@@ -3,6 +3,7 @@ import { spacing } from "@/theme/spacing";
 import Link from "next/link";
 import styled from "styled-components";
 import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
 
 const Container = styled.div`
   display: flex;
@@ -30,8 +31,8 @@ const routes = {
 
 const Navigation = () => {
   const pathname = usePathname();
+  const locale = useLocale();
 
-  console.log(pathname);
   return (
     <Container>
       <NavLink isActive={pathname === routes.home} href={routes.home}>
