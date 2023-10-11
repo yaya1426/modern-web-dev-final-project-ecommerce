@@ -1,9 +1,9 @@
 import { colors } from "@/theme/colors";
 import { spacing } from "@/theme/spacing";
-import Link from "next/link";
 import styled from "styled-components";
 import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
+import Link from "next-intl/link";
 
 const Container = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
 const routes = {
   home: "/",
   categories: "/categories",
-  about: "/about",
+  about: "/aramex",
 };
 
 const Navigation = () => {
@@ -35,16 +35,25 @@ const Navigation = () => {
 
   return (
     <Container>
-      <NavLink isActive={pathname === routes.home} href={routes.home}>
+      <NavLink
+        isActive={pathname === routes.home}
+        href={routes.home}
+        locale={locale}
+      >
         Home
       </NavLink>
       <NavLink
         isActive={pathname === routes.categories}
         href={routes.categories}
+        locale={locale}
       >
         Categories
       </NavLink>
-      <NavLink isActive={pathname === routes.about} href={routes.about}>
+      <NavLink
+        isActive={pathname === routes.about}
+        href={routes.about}
+        locale={locale}
+      >
         About
       </NavLink>
     </Container>

@@ -44,14 +44,14 @@ export default async function LocaleLayout({
   const messages = await getMessages(locale);
 
   return (
-    <ClerkProvider>
-      <html lang={locale} dir={locale === "en" ? "ltr" : "rtl"}>
-        <StyledComponentsRegistry>
-          <NextIntlClientProvider locale={locale} messages={messages}>
+    <html lang={locale} dir={locale === "en" ? "ltr" : "rtl"}>
+      <StyledComponentsRegistry>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ClerkProvider>
             <BodyContainer>{children}</BodyContainer>
-          </NextIntlClientProvider>
-        </StyledComponentsRegistry>
-      </html>
-    </ClerkProvider>
+          </ClerkProvider>
+        </NextIntlClientProvider>
+      </StyledComponentsRegistry>
+    </html>
   );
 }
