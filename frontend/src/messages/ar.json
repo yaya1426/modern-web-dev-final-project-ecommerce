@@ -1,6 +1,17 @@
 {
   "language": "English",
-  "Index": {
-    "title": "مرحباً بالعالم المثالي"
+  "Navigation": {
+    "home": "الرئيسية",
+    "categories": "التصنيفات",
+    "about": "تعرف علينا"
+  },
+  "Home": {
+    "title": "مرحبا بك في منزلك"
+  },
+  "Categories": {
+    "title": "تصنيفاتي"
+  },
+  "About": {
+    "title": "عن موقعنا الجامد جداً"
   }
 }

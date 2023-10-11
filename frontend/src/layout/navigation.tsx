@@ -2,7 +2,7 @@ import { colors } from "@/theme/colors";
 import { spacing } from "@/theme/spacing";
 import styled from "styled-components";
 import { usePathname } from "next/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next-intl/link";
 
 const Container = styled.div`
@@ -26,12 +26,13 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
 const routes = {
   home: "/",
   categories: "/categories",
-  about: "/aramex",
+  about: "/about",
 };
 
 const Navigation = () => {
   const pathname = usePathname();
   const locale = useLocale();
+  const t = useTranslations("Navigation");
 
   return (
     <Container>
@@ -40,21 +41,21 @@ const Navigation = () => {
         href={routes.home}
         locale={locale}
       >
-        Home
+        {t("home")}
       </NavLink>
       <NavLink
         isActive={pathname === routes.categories}
         href={routes.categories}
         locale={locale}
       >
-        Categories
+        {t("categories")}
       </NavLink>
       <NavLink
         isActive={pathname === routes.about}
         href={routes.about}
         locale={locale}
       >
-        About
+        {t("about")}
       </NavLink>
     </Container>
   );

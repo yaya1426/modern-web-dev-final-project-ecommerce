@@ -1,6 +1,17 @@
 {
   "language": "عربي",
-  "Index": {
-    "title": "Hello world!"
+  "Navigation": {
+    "home": "Home",
+    "categories": "Categories",
+    "about": "About"
+  },
+  "Home": {
+    "title": "Welcome to your home"
+  },
+  "Categories": {
+    "title": "My Categories"
+  },
+  "About": {
+    "title": "About Meme Store"
   }
 }

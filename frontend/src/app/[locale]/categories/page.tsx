@@ -1,7 +1,8 @@
+"use client";
+import { useTranslations } from "next-intl";
 
- 
 export default function Page() {
-  return(
-<div>Categories</div>
-  ) 
+  const t = useTranslations("Categories");
+
+  return <h1>{t("title")}</h1>;
 }
