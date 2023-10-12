@@ -3,7 +3,8 @@
   "Navigation": {
     "home": "Home",
     "categories": "Categories",
-    "about": "About"
+    "about": "About",
+    "chat": "Chat"
   },
   "Home": {
     "title": "Welcome to your home"

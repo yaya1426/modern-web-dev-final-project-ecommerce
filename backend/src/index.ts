@@ -7,6 +7,7 @@ import productRoutes from "./routes/product";
 import userRoutes from "./routes/user";
 import cartRoutes from "./routes/cart";
 import orderRoutes from "./routes/order";
+import chatRoutes from "./routes/chat";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -27,6 +28,7 @@ app.use("/product", productRoutes);
 app.use("/user", userRoutes);
 app.use("/cart", cartRoutes);
 app.use("/order", orderRoutes);
+app.use("/chat", chatRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

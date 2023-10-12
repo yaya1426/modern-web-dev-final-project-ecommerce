@@ -27,6 +27,7 @@ const routes = {
   home: "/",
   categories: "/categories",
   about: "/about",
+  chat: "/chat"
 };
 
 const Navigation = () => {
@@ -56,6 +57,13 @@ const Navigation = () => {
         locale={locale}
       >
         {t("about")}
+      </NavLink>
+      <NavLink
+        isActive={pathname === routes.chat}
+        href={routes.chat}
+        locale={locale}
+      >
+        {t("chat")}
       </NavLink>
     </Container>
   );

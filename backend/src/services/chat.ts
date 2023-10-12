@@ -1,7 +1,12 @@
-import axios from "axios";
+import OpenAI from "openai";
 
-const apiClient = axios.create();
+const openai = new OpenAI();
 
-export const PromptChat = (query: string) => {
-  // TO DO: Implement http request to ChatGPT and return response message
+export const PromptGPTChat = async (query: string) => {
+  const chatCompletion = await openai.chat.completions.create({
+    messages: [{ role: "user", content: query }],
+    model: "gpt-3.5-turbo",
+  });
+
+  return chatCompletion.choices;
 };
