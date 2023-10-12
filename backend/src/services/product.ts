@@ -2,6 +2,10 @@ import CategoryModel from "../models/category";
 import ProductModel from "../models/product";
 import Product from "../types/product";
 
+export const fetchLatestProducts = async () => {
+  return await ProductModel.find().sort({ createdAt: -1 });
+};
+
 export const fetchProducts = async (categoryId: string) => {
   return await ProductModel.find({ category: categoryId }).populate("category");
 };

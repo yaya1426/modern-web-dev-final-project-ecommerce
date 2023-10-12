@@ -5,9 +5,19 @@ import {
   fetchProducts,
   fetchProductById,
   updateProduct,
+  fetchLatestProducts,
 } from "../services/product";
 
 const router = Router();
+
+router.get("/latest", async (req: Request, res: Response) => {
+  try {
+    const data = await fetchLatestProducts();
+    res.status(200).json(data);
+  } catch (err: any) {
+    res.status(500).json({ error: err?.message });
+  }
+})
 
 router.get("/:id", async (req: Request, res: Response) => {
   try {
