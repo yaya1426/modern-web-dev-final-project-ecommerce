@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.25.3",
+    "@paypal/checkout-server-sdk": "^1.0.3",
+    "@paypal/react-paypal-js": "^8.1.3",
+    "@types/paypal__checkout-server-sdk": "^1.0.6",
     "next": "13.5.1",
     "next-intl": "^2.20.2",
     "react": "^18",
